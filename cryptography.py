@@ -30,7 +30,7 @@ while end == "false":
         for s in userstring:
             stringint.append(associations.find(s))
         for a in userkey:
-            keyInt.append(associations.find(a))
+            keyint.append(associations.find(a))
         while len(keyint) <= len(stringint):
             keyint = keyint + keyint
         zippednumbers = zip(stringint, keyint)
