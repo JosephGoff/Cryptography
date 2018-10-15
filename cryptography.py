@@ -37,8 +37,8 @@ while end == "false":
         for d in zippednumbers:
             encryptednumbers.append((d[0] + d[1]))
         for r in encryptednumbers:
-            if r > 85:
-                r = r - 85
+            if r > 46:
+                r = r - 46
             encryptedletters = encryptedletters + associations[r]
         print(encryptedletters) 
     elif userinput == "d":
@@ -55,7 +55,7 @@ while end == "false":
             decryptednumbers.append((e[0] - e[1]))
         for w in decryptednumbers:
             if w < 0:
-                w = w + 85
+                w = w + 46
             decryptedletters = decryptedletters + associations[w]
         print(decryptedletters)
     elif userinput == "x":
