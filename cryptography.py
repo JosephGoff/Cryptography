@@ -13,52 +13,52 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 end = "false"
 while end == "false":
-    stringInt = []
-    keyInt = []
-    encryptedNumbers = []
-    encryptedLetters = ""
-    cyphertextNums = []
-    cypherkeyNums = []
-    decryptedNums = []
-    decryptedLetters = ""
-    userinput = input("Type e to encrypt, d to decrypt, or q to quit: ")
-    if userinput != "e" and userinput != "d" and userinput != "q":
-        print("Did not understand command, try again. ")
+    stringint = []
+    keyint = []
+    encryptednumbers = []
+    encryptedletters = ""
+    cyphertextnumbers = []
+    cypherkeynumbers = []
+    decryptednumbers = []
+    decryptedletters = ""
+    userinput = input("Type e to encrypt, d to decrypt, or x to exit: ")
+    if userinput != "e" and userinput != "d" and userinput != "x":
+        print("Invalid command. Please try again. ")
     elif userinput == "e":
-        userString = input("Message: ")
-        userKey = input("Key: ")
-        for i in userString:
-            stringInt.append(associations.find(i))
-        for e in userKey:
-            keyInt.append(associations.find(e))
-        while len(keyInt) <= len(stringInt):
-            keyInt = keyInt + keyInt
-        zippedNumbers = zip(stringInt, keyInt)
-        for p in zippedNumbers:
-            encryptedNumbers.append((p[0] + p[1]))
-        for t in encryptedNumbers:
-            if t > 85:
-                t = t - 85
-            encryptedLetters = encryptedLetters + associations[t]
-        print(encryptedLetters) 
+        userstring = input("Message: ")
+        userkey = input("Key: ")
+        for s in userstring:
+            stringint.append(associations.find(s))
+        for a in userkey:
+            keyInt.append(associations.find(a))
+        while len(keyint) <= len(stringint):
+            keyint = keyint + keyint
+        zippednumbers = zip(stringint, keyint)
+        for d in zippednumbers:
+            encryptednumbers.append((d[0] + d[1]))
+        for r in encryptednumbers:
+            if r > 85:
+                r = r - 85
+            encryptedletters = encryptedletters + associations[r]
+        print(encryptedletters) 
     elif userinput == "d":
-        userCyphertext = input("Message: ")
-        cyphertextKey = input("Key: ")
-        for q in userCyphertext:
-            cyphertextNums.append(associations.find(q))
-        for y in cyphertextKey:
-            cypherkeyNums.append(associations.find(y))
-        while len(cyphertextNums) >= len(cypherkeyNums):
-            cypherkeyNums = cypherkeyNums + cypherkeyNums
-        zippedCypher = zip(cyphertextNums, cypherkeyNums)
-        for r in zippedCypher:
-            decryptedNums.append((r[0] - r[1]))
-        for h in decryptedNums:
-            if h < 0:
-                h = h + 85
-            decryptedLetters = decryptedLetters + associations[h]
-        print(decryptedLetters)
-    elif userinput == "q":
-        print("Better luck next time")
+        usercyphertext = input("Message: ")
+        cyphertextkey = input("Key: ")
+        for y in usercyphertext:
+            cyphertextnumbers.append(associations.find(y))
+        for i in cyphertextkey:
+            cypherkeynumbers.append(associations.find(i))
+        while len(cyphertextnumbers) >= len(cypherkeynumbers):
+            cypherkeynumbers = cypherkeynumbers + cypherkeynumbers
+        zippedcypher = zip(cyphertextnumbers, cypherkeynumbers)
+        for e in zippedcypher:
+            decryptednumbers.append((e[0] - e[1]))
+        for w in decryptednumbers:
+            if w < 0:
+                w = w + 85
+            decryptedletters = decryptedletters + associations[w]
+        print(decryptedletters)
+    elif userinput == "x":
+        print("You have exited.")
         end = "true"    
     
