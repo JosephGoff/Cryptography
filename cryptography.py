@@ -21,7 +21,7 @@ while end == "false":
     cypherkeynumbers = []
     decryptednumbers = []
     decryptedletters = ""
-    userinput = input("Type e to encrypt, d to decrypt, or x to exit: ")
+userinput = input("Type e to encrypt, d to decrypt, or x to exit: ")
     if userinput != "e" and userinput != "d" and userinput != "x":
         print("Invalid command. Please try again. ")
     elif userinput == "e":
