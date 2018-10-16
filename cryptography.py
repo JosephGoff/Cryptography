@@ -21,8 +21,8 @@ while end == "false":
     cypherkeynumbers = []
     decryptednumbers = []
     decryptedletters = ""
-    userinput = input("Type e to encrypt, d to decrypt, or x to exit: ")
-    if userinput != "e" and userinput != "d" and userinput != "x":
+    userinput = input("Type e to encrypt, d to decrypt, or q to quit: ")
+    if userinput != "e" and userinput != "d" and userinput != "q":
         print("Invalid command. Please try again. ")
     elif userinput == "e":
         userstring = input("Message: ")
@@ -58,7 +58,7 @@ while end == "false":
                 w = w + 85
             decryptedletters = decryptedletters + associations[w]
         print(decryptedletters)
-    elif userinput == "x":
-        print("You have exited.")
+    elif userinput == "q":
+        print("Goodbye!")
         end = "true"    
     
